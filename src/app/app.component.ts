@@ -14,8 +14,9 @@ export interface Users {
 })
 export class AppComponent implements OnInit {
 
-  expression: boolean = true;
+  expression: boolean = false;
   deepObject: any = null;
+  age = 18;
 
   // users: Users[] = [
   //   { id: 1, name: 'Almas', template: 'bold' },
@@ -85,5 +86,9 @@ export class AppComponent implements OnInit {
 
   trackBy(index: number, user: Users) {
     return user.id;
+  }
+
+  onSayHi(text: string) {
+    console.log(text);
   }
 }

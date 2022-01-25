@@ -1,1 +1,20 @@
+<h1>{{title.toLocaleUpperCase()}}</h1>
 <p>foo works!</p>
+<button (click)="onSayHi()">Say Hi</button>
+
+<hr>
+<div>
+  <button (click)="counterChange.emit(counter + 1)">+</button>
+  <span>{{counter}}</span>
+  <button (click)="counterChange.emit(counter - 1)">-</button>
+</div>
+<hr>
+
+<style>
+  button {
+    margin-left: 10px;
+  }
+  span {
+    padding: 5px;
+  }
+</style>
