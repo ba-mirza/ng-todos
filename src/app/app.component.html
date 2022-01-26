@@ -57,6 +57,35 @@
 <!--    </li>-->
 <!--</ul>-->
 
-<app-foo [(counter)]="age" (sayHi)="onSayHi($event)" [title]="expression ? 'one' : 'two'"></app-foo>
+<!--<app-foo [(counter)]="age" (sayHi)="onSayHi($event)" [title]="expression ? 'one' : 'two'"></app-foo>-->
 
-<button (click)="expression = !expression">{{!expression ? 'one' : 'two'}}</button>
+<!--<button (click)="expression = !expression">{{!expression ? 'one' : 'two'}}</button>-->
+
+<div>
+  <button (click)="menu.show()">
+    Open menu
+  </button>
+  <app-menu #menu>
+    <p>From App Component</p>
+  </app-menu>
+</div>
+
+<div>
+  <button (click)="menu1.show()">
+    Open menu
+  </button>
+  <app-menu #menu1>
+    <p>From App Component1</p>
+  </app-menu>
+</div>
+
+<div>
+  <button (click)="menu2.show()">
+    Open menu
+  </button>
+  <app-menu #menu2>
+    <p>From App Component2</p>
+  </app-menu>
+</div>
+
+
